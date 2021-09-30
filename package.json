@@ -1,7 +1,7 @@
 {
-  "name": "yy-vue2-custom-scaffold",
+  "name": "yy-vue2-ts-custom-scaffold",
   "version": "1.0.0",
-  "description": "基于Webpack4搭建的Vue2脚手架",
+  "description": "基于Webpack4搭建的Vue2脚手架，使用vue-property-decorator库支持ts",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack serve --config ./build/webpack.dev.config.js --open",
     "build": "cross-env NODE_ENV=production webpack --config ./build/webpack.prod.config.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yyISACoder/vue2-custom-scaffold.git"
+    "url": "git+https://github.com/yyISACoder/vue2-ts-custom-scaffold.git"
   },
   "keywords": [],
   "author": "Carl",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yyISACoder/vue2-custom-scaffold/issues"
+    "url": "https://github.com/yyISACoder/vue2-ts-custom-scaffold/issues"
   },
-  "homepage": "https://github.com/yyISACoder/vue2-custom-scaffold#readme",
+  "homepage": "https://github.com/yyISACoder/vue2-ts-custom-scaffold#readme",
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/plugin-transform-runtime": "^7.15.0",
