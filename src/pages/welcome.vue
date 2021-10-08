@@ -10,14 +10,23 @@
 </template>
 
 <script lang="ts">
-  import avatar from '@/assets/images/avatar.jpg'
   import { Vue, Component } from "vue-property-decorator"
+  import { getModule } from 'vuex-module-decorators'
+  import exampleModule from '@/store/example'
+  import store from '@/store/index'
+  import avatar from '../assets/images/avatar.jpg'
 
   @Component
   class Welcome extends Vue{
     avatar:string = avatar 
-    notice:string = '欢迎使用Carl的Vue2脚手架😉'
     githubLink:string = 'https://github.com/yyISACoder/vue2-ts-custom-scaffold'
+
+    get exampleModuleInstance():any {
+      return getModule(exampleModule, store)
+    }
+    get notice() {
+      return this.exampleModuleInstance.welcomeTxt
+    }
   }
 
   export default Welcome

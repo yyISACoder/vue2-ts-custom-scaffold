@@ -83,7 +83,7 @@ module.exports = {
     alias: {
       "@": path.join(__dirname,'..','src')
     },
-    //extensions: ['*','vue','ts','js','json']
+    extensions: ['.vue','.ts','.js','.json']
   },
   optimization: {
     runtimeChunk: 'single'
