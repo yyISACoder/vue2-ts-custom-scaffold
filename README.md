@@ -12,7 +12,6 @@
 9. 利用 **vuex-module-decorators** 集成了vuex
 
 ## 使用
-1. **yarn**
-2. **yarn dev** 开发
-3. **yarn build** 打包
-4. **yarn build:report** 打包并查看报告
+1. **yarn dev** 开发
+2. **yarn build** 打包
+3. **yarn build:report** 打包并查看报告
