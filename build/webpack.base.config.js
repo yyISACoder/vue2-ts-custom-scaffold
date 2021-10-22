@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 const NODE_ENV = process.env.NODE_ENV
 
@@ -64,6 +65,9 @@ module.exports = {
     ]
   },
   plugins:[
+    new ESLintPlugin({
+      extensions: ['ts','vue']
+    }),
     new webpack.ProgressPlugin(),
     new VueLoaderPlugin(),
     new CleanWebpackPlugin(),

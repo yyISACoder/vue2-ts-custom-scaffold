@@ -19,9 +19,9 @@
   @Component
   class Welcome extends Vue{
     avatar:string = avatar 
-    githubLink:string = 'https://github.com/yyISACoder/vue2-ts-custom-scaffold'
+    githubLink = 'https://github.com/yyISACoder/vue2-ts-custom-scaffold'
 
-    get exampleModuleInstance():any {
+    get exampleModuleInstance() {
       return getModule(exampleModule, store)
     }
     get notice() {
