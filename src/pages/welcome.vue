@@ -1,35 +1,34 @@
 <template>
   <div class="welcome">
-    <img
-      :src="avatar"
-      class="avatar"
-    />
+    <img :src="avatar" class="avatar" />
     <p>{{ notice }}</p>
-    <p>github地址：<a :href="githubLink" target="_blank">{{ githubLink }}</a></p>
+    <p>
+      github地址：<a :href="githubLink" target="_blank">{{ githubLink }}</a>
+    </p>
   </div>
 </template>
 
 <script lang="ts">
-  import { Vue, Component } from "vue-property-decorator"
-  import { getModule } from 'vuex-module-decorators'
-  import exampleModule from '@/store/example'
-  import store from '@/store/index'
-  import avatar from '../assets/images/avatar.jpg'
+import { Vue, Component } from 'vue-property-decorator'
+import { getModule } from 'vuex-module-decorators'
+import exampleModule from '@/store/example'
+import store from '@/store/index'
+import avatar from '../assets/images/avatar.jpg'
 
-  @Component
-  class Welcome extends Vue{
-    avatar:string = avatar 
-    githubLink = 'https://github.com/yyISACoder/vue2-ts-custom-scaffold'
+@Component
+class Welcome extends Vue {
+  avatar: string = avatar
+  githubLink = 'https://github.com/yyISACoder/vue2-ts-custom-scaffold'
 
-    get exampleModuleInstance() {
-      return getModule(exampleModule, store)
-    }
-    get notice() {
-      return this.exampleModuleInstance.welcomeTxt
-    }
+  get exampleModuleInstance() {
+    return getModule(exampleModule, store)
   }
+  get notice() {
+    return this.exampleModuleInstance.welcomeTxt
+  }
+}
 
-  export default Welcome
+export default Welcome
 </script>
 
 <style lang="scss" scoped>
@@ -48,14 +47,14 @@
     width: 200px;
     border-radius: 50%;
   }
-  p{
+  p {
     margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
     &:nth-child(3) {
       margin-top: 100px;
       a {
-        color:#00f;
+        color: #00f;
         text-decoration: underline;
         &:hover {
           color: #40a9ff;

@@ -1,3 +1,3 @@
 module.exports = {
-  '*.(ts|vue)': 'eslint --fix'
+  '*.(ts|vue)': 'eslint'
 }
