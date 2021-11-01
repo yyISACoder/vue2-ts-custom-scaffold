@@ -11,6 +11,7 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import { getModule } from 'vuex-module-decorators'
+import request from '@/utils/request'
 import exampleModule from '@/store/example'
 import store from '@/store/index'
 import avatar from '../assets/images/avatar.jpg'
@@ -25,6 +26,11 @@ class Welcome extends Vue {
   }
   get notice() {
     return this.exampleModuleInstance.welcomeTxt
+  }
+
+  async mounted() {
+    const res = await request('scaffold')
+    console.log(res)
   }
 }
 

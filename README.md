@@ -10,7 +10,8 @@
 7. 支持 **typescript**
 8. 集成了 **vue-router** 
 9. 利用 **vuex-module-decorators** 集成了vuex
-10. 集成lint-staged、husky、commitlint、eslint、prettier工具链，用于规范代码风格与提高代码质量
+10. 集成 **axios**
+11. 集成lint-staged、husky、commitlint、eslint、prettier工具链，用于规范代码风格与提高代码质量
 
 ## 使用
 1. **yarn dev** 开发
